@@ -1,0 +1,45 @@
+pwd -> present working directory
+
+whoami -> username
+
+date
+
+history
+
+who
+
+mkdir _DirName_
+
+ls
+
+touch _fileName_ -> create file
+
+cat _fileName_  -> view contents
+
+vi _fileName_   -> edit contents
+
+rm _filename_ -> remove file
+
+cp _fileName_ _Directory_  -> copy file
+
+cd
+
+cd ..
+
+rmdir _DirName_ -> remove empty directory
+
+mv _file_ _Dir_     -> move file
+
+sudo su        -> administrative access(change to root directory)         exit -> goes to normal directory
+
+clear
+
+man -> guide for commands
+
+exit
+
+w   -> who and current process
+
+alias
+
+echo    -> directly print text on terminal
