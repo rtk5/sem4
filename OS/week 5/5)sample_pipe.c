@@ -7,7 +7,7 @@ int main() {
     int fd[2],n;
     char buff[100];
     pid_t p;
-    pipe(fd);
+    pipe(fd);   //ceates pipeline btw parent and child
     p = fork();
     if(p>0) {
         printf("Parent passing value to child\n");
