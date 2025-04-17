@@ -22,3 +22,10 @@ int main(void)
 
    exit(0);
 }
+
+/*
+rithvikmatta@penguin:~/sem4/OS/week 15$ gcc demo_getuid.c 
+rithvikmatta@penguin:~/sem4/OS/week 15$ ./a.out
+real uid = 1000, effective uid = 1000
+real uid = 1000, effective uid = 1000
+*/

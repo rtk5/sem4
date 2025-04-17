@@ -15,3 +15,13 @@ int main(int argc, char *argv[])
 
    exit(0);
 }
+
+/*output-->
+
+rithvikmatta@penguin:~/sem4/OS/week 15$ gcc demo_umask.c 
+rithvikmatta@penguin:~/sem4/OS/week 15$ touch sample.txt
+rithvikmatta@penguin:~/sem4/OS/week 15$ ./a.out sample.txt
+rithvikmatta@penguin:~/sem4/OS/week 15$ ls -l sample.txt
+-rw-r--r-- 1 rithvikmatta rithvikmatta 0 Apr 17 10:40 sample.txt
+
+*/
