@@ -35,33 +35,29 @@ def simulate_browser_visits(cache_size, num_visits=1000, num_unique_pages=100):
     return cache.get_hit_rate(), cache.get_miss_rate()
 
 def analyze_cache_performance():
-    # Use powers of 2 for cache sizes: 1, 2, 4, 8, ..., 128
-    cache_sizes = [2 ** i for i in range(8)]  # 2^0 to 2^7 (1 to 128)
+    cache_sizes = list(range(1, 101, 5))  # Cache sizes from 1 to 100
     hit_rates = []
     miss_rates = []
-
+    if(cache_sizes%2 ==0) {
     for size in cache_sizes:
         hit_rate, miss_rate = simulate_browser_visits(size)
         hit_rates.append(hit_rate)
         miss_rates.append(miss_rate)
-
+    }
     # Plotting the results
     plt.figure(figsize=(10, 6))
     plt.plot(cache_sizes, hit_rates, label='Hit Rate', marker='o')
     plt.plot(cache_sizes, miss_rates, label='Miss Rate', marker='x')
-    plt.xlabel("Cache Size (Powers of 2)")
+    plt.xlabel("Cache Size (N)")
     plt.ylabel("Rate")
     plt.title("Hit/Miss Rates vs Cache Size (LRU Cache)")
-    plt.xscale('log', base=2)
-    plt.xticks(cache_sizes, cache_sizes)  # Show actual cache size values
     plt.legend()
-    plt.grid(True, which='both', linestyle='--')
+    plt.grid(True)
     plt.tight_layout()
     plt.show()
 
-
 def test_case():
-    cache = LRUCache(capacity=4)
+    cache = LRUCache(capacity=10)
 
     # Increased to 20 page visits
     page_visits = ["A", "B", "C", "A", "D", "E", "A", "B", "C", "D", 
